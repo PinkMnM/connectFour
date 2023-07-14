@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Luckiest Guy';
+  text-align: center;
+  margin-top: 0.5rem;
+}
+#board td {
+  width: 78px;
+  height: 78px;
+  border: solid 1px #666;
+  border-radius: 50%;
+}
+#game {
+  position: absolute;
+  top: 4rem;
+  left: 50%;
+  transform: translate(-50%);
+  width: 600px;
+  height: 600px;
+  background: rgba(0, 255, 255, 0.94);
+  border: 1px solid black;
+  box-shadow: 5px 5px rgba(0, 0, 0, 0.441);
+  padding: 1.5rem;
+}
+.piece {
+  margin: 5px;
+  width: 85%;
+  height: 85%;
+  border-radius: 50%;
+}
+.piece.p1 {
+  background-color: red;
+}
+.piece.p2 {
+  background-color: blue;
+}
+#column-top td {
+  border: dashed 1px lightgray;
+}
+#column-top td:hover {
+  background-color: purple;
+}
+@keyframes fall-animation {
+  from {
+    transform: translateY(-500px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+.piece {
+  animation-name: fall-animation;
+  animation-duration: 500ms;
+}
+.button {
+  position: absolut;
+  top: 95vh;
+  left: 50%;
+  transform: translate(-50%);
+  border: 1px solid black;
+  width: 5rem;
+  text-align: center;
+  cursor: pointer;
+}
